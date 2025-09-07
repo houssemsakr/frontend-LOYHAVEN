@@ -1,0 +1,45 @@
+/* product-details.component.css */
+
+.card-title {
+    color: black; /* Couleur noire pour le titre principal */
+  }
+  
+  /* Styles personnalisés */
+  
+  .container {
+    max-width: 800px; /* Limite la largeur du contenu */
+  }
+  
+  .colorful-heading {
+    color: #66bb6a; /* Couleur vert pistache pour le titre */
+  }
+  
+  .green-text {
+    color: #66bb6a; /* Couleur vert pistache pour le texte */
+  }
+  
+  .black-text {
+    color: black; /* Couleur noire pour le texte */
+  }
+  
+  .blue-text {
+    color: blue; /* Couleur bleue pour le texte */
+  }
+  /* styles.css (ou votre fichier CSS personnalisé) */
+
+.border-blue {
+    border: 2px solid #007bff; /* Couleur bleue */
+    border-radius: 4px; /* Coins arrondis */
+}
+
+
+
+/* square.component.css */
+
+.square-container {
+    width: 900px; /* Largeur du carré */
+    height: 900px; /* Hauteur du carré */
+    border: 2px solid #ADD8E6; /* Bordure bleu clair */
+    border-radius: 8px; /* Coins arrondis */
+  }
+  

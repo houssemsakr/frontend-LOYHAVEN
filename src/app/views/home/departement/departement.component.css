@@ -1,0 +1,525 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Georama:wght@300;400;500&display=swap');
+*
+{
+    margin:0;
+    padding:0;
+    font-family: 'Georama', sans-serif;
+    box-sizing:border-box;
+    text-transform: capitalize;
+}
+html
+{
+    font-size:15px;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar
+{
+    width:.8rem;
+}
+html::-webkit-scrollbar-thumb
+{
+    background: rgb(236, 35, 119);
+}
+section
+{
+    min-height: 100vh;
+    padding:1rem 10%;
+    padding-top:8rem;
+}
+.green-heading {
+    color: #7dce94; /* Code couleur pour le vert pistache */
+  }
+  
+header 
+{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:whitesmoke;
+    padding:1rem;
+    box-shadow:0 .2rem .3rem lightgray;
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.colorful-heading {
+    color: rgb(19, 228, 23); /* Remplacez "blue" par la couleur de votre choix */
+  }
+  
+header .logo img 
+{
+    height:6rem;
+}
+header .navigate ul 
+{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    list-style: none;
+}
+header .navigate ul li 
+{
+    margin-left:3rem;
+}
+header .navigate ul li a 
+{
+    font-size: 1.2rem;
+    color:limegreen;
+    text-decoration:none;
+    font-weight: 500;
+}
+header .navigate ul li a.active,
+header .navigate ul li a:hover 
+{
+    color:rgb(236, 35, 119);
+}
+header #menu 
+{
+    font-size: 2rem;
+    color:rgb(236, 35, 119);
+    cursor: pointer;
+    display: none;
+}
+
+@media(max-width:768px)
+{
+    header #menu 
+    {
+    display:block;
+    }
+    header .navigate 
+    {
+        position:fixed;
+        top:8rem;
+        left: 0;
+        width: 100%;
+        background:aliceblue;
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+    }
+    header .navigate ul 
+    {
+        flex-flow: column;
+        padding: 1rem;
+    }
+    header .navigate ul li 
+    {
+        margin:1rem;
+        width: 100%;
+    }
+    header .navigate ul li a 
+    {
+        display: block;
+        color: #000;
+        padding-left: 2rem;
+        border-right: .1rem solid #000;
+        font-size: 1rem;
+    }
+    header .navigate ul li a:hover,
+    header .navigate ul li a.active 
+    {
+        color:rgb(236, 35, 119);
+        border-color:rgb(236, 35, 119);
+    }
+    header .navigate.nav-toggle
+    {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    .fa-times
+    {
+        transition:.5s ease;
+        transform:rotate(180deg);
+    }
+}
+/*----------------section-------------*/
+.home 
+{
+     background-position: center;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+}
+.home h1 
+{
+    padding-top:20%;
+    font-size:4rem;
+    text-shadow: 2px 2px #fa4975;
+    letter-spacing: 1px;
+}
+.home p 
+{
+    font-size:1.5rem;
+    line-height:2rem;
+}
+.home-btn
+{
+    padding:20px 0;
+}
+.home-btn button
+{
+    width:15rem;
+    padding: 12px 15px;
+    border:none;
+    border-radius:5px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1px;
+    color:#fff;
+    background:rgb(236, 35, 119); 
+}
+button i 
+{
+    margin-left: .5rem;
+   font-size:1rem;
+   text-align: center;
+   transition: 2s ease;
+   animation: animate .5s ease infinite;
+}
+button:hover 
+{
+    background:rgb(228, 3, 96);
+    
+}
+@keyframes animate 
+{
+    0%
+    {
+        transform:translateX(-5px);
+    }
+    100% 
+    {
+        transform: translateX(5px);
+    }
+}
+@media(max-width:768px)
+{
+    .home h1 
+    {
+        font-size: 3rem;
+        padding-top: 50%;
+    }
+    .home p 
+    {
+        font-size:1.2rem;
+    }   
+}
+/*-----------------------about us-----------*/
+.about
+{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.about .about-content
+{
+    width: 300px;
+    height: 300px;
+    padding:4rem 2rem;
+    box-shadow:0 .2rem .5rem rgb(236, 35, 119) ;
+    text-align: center;
+    background:limegreen;
+    border-radius: 5px;
+}
+.about-content h2 
+{
+    font-size:2.5rem;
+    color:#fff;
+    padding:.5rem 0;
+    letter-spacing:.2rem;
+    text-shadow: .2rem .2rem #fa4975;
+}
+
+.about .image img 
+{
+    width:200%;
+    height: auto;
+    
+}
+.about .image img:hover 
+{
+    animation:animate-img 5s ease infinite;
+}
+
+@keyframes animate-img
+{
+    0%,100%
+    {
+        transform: translateX(-3rem);
+    }
+    25%
+    {
+        transform: translateY(5rem);
+    }
+    50%
+    {
+        transform: translateX(3rem);
+    }
+    75%
+    {
+        transform: translateY(-5rem);
+    }
+}
+@media(max-width:768px)
+{
+    .about
+    {
+    display: block;
+    justify-content: space-between;
+    align-items:center;
+    }
+}
+/*----------------------Product---------------*/
+.colorful-heading {
+    color: rgb(19, 228, 23); /* Remplacez "blue" par la couleur de votre choix */
+  }
+.title
+{
+    text-align:center;
+    font-size:3rem;
+    padding:0.5rem;
+    color:rgb(236, 35, 119);
+}
+.title span
+{
+    color:limegreen;
+}
+.events-product .inner-events-row
+{
+   display: flex;
+   align-items: center;
+   justify-content:center;
+   flex-wrap: wrap; 
+}
+.events-product .inner-events-col
+{
+    max-width: 1300px;
+    background:#fff;
+    height: 27rem;
+    flex:1 1 20rem;
+    padding:1.2rem;
+    margin:1.5rem;
+    border-radius:1rem;
+    box-shadow:0 .3rem .6rem rgb(236, 35, 119);
+    text-align: center;
+}
+.events-product .inner-events-col:hover 
+{
+    transition:.5s ease;
+    transform:translateY(-.5rem);
+}
+.events-product .inner-events-col img 
+{
+    height: 15rem;
+    width:100%;
+    object-fit: cover;
+}
+.events-product .inner-events-col .events-price p
+{
+  position:absolute;     
+  width: 2.7rem;
+  height: auto;
+  margin-top:-1.2rem;
+  margin-left: 8rem;
+  padding:.8rem .1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  border:none;
+  border-radius:5rem;
+  background:lightgray;
+  color:#000;
+}
+.events-star
+{
+    color: #FFDF00;
+    position:relative;
+    margin-top: 1.7rem;
+}
+.events-product .inner-events-col h2
+{
+    padding: .5rem 0;
+    color:darkblue;
+    font-size:1.6rem;
+    letter-spacing:.1rem;
+}
+.events-product .inner-events-col h3 
+{
+    color:gray;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.events-product .inner-events-col p 
+{
+    color:gray;
+    font-size: 1rem;
+    font-weight: 500;
+    padding:.5rem 0;
+}
+@media(max-width:768px)
+{
+    .title
+    {
+        text-align:center;
+        font-size:2rem;
+    }
+}
+/*----------------------------------services---------*/
+.expert{
+    margin-top:-100px;
+}
+
+.expert .contenu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.expert .contenu .box{
+    width: 250px;
+    margin: 15px;
+}
+.expert .contenu .box img{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.expert .contenu .box h3{
+    color: #111;
+    font-weight: 400;
+    text-align: center;
+}
+/*---------------------contact us---------*/
+.contact
+{
+    padding-top:8.5rem;
+}
+.call-contact
+{
+    width:100%;
+    background:whitesmoke;
+}
+.call-contact-row
+{   
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center;
+}
+.call-contact-col 
+{
+    margin:2rem;
+    flex: 1 1 20rem;
+    text-align:center;
+}
+.call-contact-col .images 
+{
+    border:1px solid #fff;
+    width: 400px;
+    height: 400px;
+}
+.call-contact-col img
+{
+    width:90%;
+    height:auto;
+    margin:1.5rem;
+    padding:1rem;
+    flex:1 1 21rem;
+    border:1px solid transparent;
+    border-radius: 1rem;   
+}
+.call-contact-col h1 
+{
+    padding:1rem 0;
+    color:rgb(236, 35, 119);
+    letter-spacing: .1rem;
+}
+.call-contact-col .social i
+{
+    padding:.8rem;
+    border: none;
+    border-radius: 1rem;
+    background:rgb(236, 35, 119);
+    color:#fff;
+    font-size: 1.5rem;
+}
+.call-contact-col .social i:hover 
+{
+    transition: 0.5s ease;
+    background: limegreen;
+    color:#fff;
+    cursor: pointer;
+}
+.call-contact-col p 
+{
+    padding:.5rem 0;
+    line-height:1.5rem;
+    color:gray;
+}
+.call-contact-col input, .call-contact-col textarea 
+{
+    width:80%;
+    padding:1rem;
+    margin-bottom:1.2rem;
+    border:none;
+    border-bottom:.1rem dotted rgb(236, 35, 119);  
+}
+.call-contact-col textarea
+{
+    resize: none;
+}
+.copyright
+{
+    margin-top:5rem;
+    padding:3rem;
+    text-align:center;
+    background: gray;
+}
+.copyright i 
+{
+    font-size:2rem;
+    color:#fff;
+}
+.copyright p 
+{
+    letter-spacing: .1rem;
+    font-size: 1.5rem;
+    color:#fff;
+}
+/* product-details.component.css */
+
+.card-title {
+    color: black; /* Couleur noire pour le titre principal */
+  }
+  
+  /* Styles personnalisés */
+  
+  .container {
+    max-width: 800px; /* Limite la largeur du contenu */
+  }
+  
+  .colorful-heading {
+    color: #1709db; /* Couleur vert pistache pour le titre */
+  }
+  
+  .green-text {
+    color: #66bb6a; /* Couleur vert pistache pour le texte */
+  }
+  
+  .black-text {
+    color: black; /* Couleur noire pour le texte */
+  }
+  
+  .blue-text {
+    color: blue; /* Couleur bleue pour le texte */
+  }
+  

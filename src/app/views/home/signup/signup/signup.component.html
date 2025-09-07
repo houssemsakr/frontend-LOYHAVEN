@@ -1,0 +1,43 @@
+<div class="w3-main">
+    <div class="w3-container" id="contact" style="margin-top: 75px;">
+      <div style="text-align: center;">
+        <h3 class="colorful-heading">Register</h3>
+  
+        <form #f="ngForm" (ngSubmit)="register(f)" style="width: 800px; margin: auto;">
+          <div class="w3-row-padding">
+            <div class="w3-half w3-section">
+              <label>Firstname</label>
+              <input class="w3-input w3-border" type="text" name="firstname" ngModel #firstname="ngModel" required>
+            </div>
+            <div class="w3-half w3-section">
+              <label>Lastname</label>
+              <input class="w3-input w3-border" type="text" name="lastname" ngModel #lastname="ngModel" required>
+            </div>
+          </div>
+          <div class="w3-row-padding">
+            <div class="w3-half w3-section">
+              <label>Age</label>
+              <input class="w3-input w3-border" type="text" name="age" ngModel #age="ngModel" required>
+            </div>
+            <div class="w3-half w3-section">
+              <label>Phone</label>
+              <input class="w3-input w3-border" type="text" name="phone" ngModel #phone="ngModel" required>
+            </div>
+          </div>
+          <div class="w3-row-padding">
+            <div class="w3-half w3-section">
+              <label>Email</label>
+              <input class="w3-input w3-border" type="email" name="email" ngModel #email="ngModel" email required>
+            </div>
+            <div class="w3-half w3-section">
+              <label>Password</label>
+              <input class="w3-input w3-border"  type="password" name="password" ngModel #password="ngModel" required>
+            </div>
+          </div>
+          <div class="alert alert-danger" *ngIf="messageErr" style="margin-bottom: 10px;">{{ messageErr }}</div>
+          <button type="submit" class="w3-input w3-border custom-green-button" style="margin-top: 20px; width: 100%;">Register</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

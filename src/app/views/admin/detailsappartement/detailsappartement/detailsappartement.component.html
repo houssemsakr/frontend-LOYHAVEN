@@ -1,0 +1,48 @@
+
+
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+      <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Details </h6>
+      </div>
+  
+  <section class="product" id="product">
+    <div class="container">
+      <!-- Titre "Details" centré et en couleur vert pistache -->
+      <!-- Contenu principal (Détails de l'Appartement et Image) -->
+      <div class="row justify-content-center">
+        <!-- Section Gauche (Détails de l'Appartement) -->
+        <div class="col-md-6">
+          <div class="events-product">
+            <div class="inner-events-row">
+              <div class="card">
+                <div class="card-body" *ngIf="dataObject">
+                    <img [src]="'http://127.0.0.1:3000/getimage/' + dataObject.image" class="card-img-top" alt="...">
+                    <p><strong><span class="blue-text">Name:</span></strong> <span class="black-text">{{ dataObject.name }}</span></p>
+                    <p><strong><span class="blue-text">PostedBy:</span></strong> <span class="black-text">{{ dataObject.postedBy }}</span></p>
+                    <p><strong><span class="blue-text">Email:</span></strong> <span class="black-text">{{ dataObject.email }}</span></p>
+                    <p><strong><span class="blue-text">Price:</span></strong> <span class="black-text">{{ dataObject.price }}</span></p>
+                    <p><strong><span class="blue-text">Phone:</span></strong> <span class="black-text">{{ dataObject.phone }}</span></p>
+                    <p><strong><span class="blue-text">Description:</span></strong> <span class="black-text">{{ dataObject.description }}</span></p>
+                  
+                    <div class="alert alert-danger" *ngIf="messageErr">
+                      {{ messageErr }}
+                    </div>
+                  </div>
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+    </div> <!-- Fin de la carte -->
+  
+  </div> <!-- Fin du container-fluid -->

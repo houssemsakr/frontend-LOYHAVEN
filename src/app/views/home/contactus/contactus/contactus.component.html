@@ -1,0 +1,37 @@
+<div class="w3-main" >
+  <div class="w3-container" id="contact" style="margin-top:75px">
+
+<div style="text-align: center;">
+  <h2  class="colorful-heading">Contact Us</h2>
+</div>
+
+<form (ngSubmit)="register()" style="width: 50%; margin: auto;">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Name" [formControl]="nameFormControl" />
+    <div *ngIf="nameFormControl.invalid && nameFormControl.dirty" class="text-danger">
+      <div *ngIf="nameFormControl.hasError('required')">Name is required.</div>
+      <div *ngIf="nameFormControl.hasError('minlength')">Name must be at least 4 characters long.</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <input type="email" class="form-control" placeholder="Email" [formControl]="emailFormControl" />
+    <div *ngIf="emailFormControl.invalid && emailFormControl.dirty" class="text-danger">
+      <div *ngIf="emailFormControl.hasError('required')">Email is required.</div>
+      <div *ngIf="emailFormControl.hasError('email')">Please enter a valid email address.</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <textarea class="form-control" rows="5" placeholder="Message" [formControl]="messageFormControl"></textarea>
+    <div *ngIf="messageFormControl.invalid && messageFormControl.dirty" class="text-danger">
+      <div *ngIf="messageFormControl.hasError('required')">Message is required.</div>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="nameFormControl.invalid || emailFormControl.invalid || messageFormControl.invalid || loading">
+    Send
+  </button>
+</form>
+</div>
+</div>

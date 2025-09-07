@@ -1,0 +1,26 @@
+/* Style pour centrer le texte du formulaire */
+div[style="text-align: center;"] {
+    text-align: center;
+  }
+  
+  /* Style pour le titre "Register" */
+  .colorful-heading {
+    color: #93c572; /* Couleur vert pistache */
+  }
+  .colorful-heading {
+    color: rgb(19, 228, 23); /* Remplacez "blue" par la couleur de votre choix */
+  }
+  /* Définir une classe personnalisée pour la couleur vert pistache */
+.custom-green-button {
+    background-color: #0cee1b;
+    color: white;
+    border: 1px solid #93c572; /* Bordure vert pistache */
+    padding: 12px 20px; /* Ajuster le padding selon les besoins */
+    border-radius: 5px; /* Ajouter des coins arrondis */
+    cursor: pointer; /* Curseur de souris pointer */
+  }
+  
+  .custom-green-button:hover {
+    background-color: #0cee1b; /* Couleur de fond au survol */
+  }
+  

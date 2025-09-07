@@ -1,0 +1,23 @@
+
+        <div class="w3-main" >
+          <div class="w3-container" id="contact" style="margin-top:75px">
+        
+        <div style="text-align: center;">
+          <h2  class="colorful-heading">Login</h2>
+        </div>
+        <form #f="ngForm" (ngSubmit)="login(f)" style="width: 50%; margin: auto;">
+          <div class="w3-section">
+            <label>Email</label>
+            <input class="w3-input w3-border" type="email" name="email" required #email="ngModel" ngModel>
+          </div>
+          <div class="w3-section">
+            <label>Password</label>
+            <input class="w3-input w3-border" type="password" name="password" required #password="ngModel" ngModel>
+          </div>
+          <div class="alert alert-danger" *ngIf="messageError">
+            {{messageError}}
+          </div>
+          <button type="submit" class="w3-input w3-border custom-green-button">Login</button>
+        </form>  
+      </div>
+    </div>

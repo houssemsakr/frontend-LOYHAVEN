@@ -1,0 +1,48 @@
+<br>
+<br>
+<br>
+<br>
+<section class="product" id="product">
+  <div class="container">
+    <!-- Titre "Details" centré et en couleur vert pistache -->
+    <div class="row justify-content-center mb-5">
+      <div class="col-12 text-center">
+        <h3 class="colorful-heading green-text">
+          <span>Details</span>
+        </h3>
+      </div>
+    </div>
+
+    <!-- Contenu principal (Détails de l'Appartement et Image) -->
+    <div class="row justify-content-center">
+      <!-- Section Gauche (Détails de l'Appartement) -->
+      <div class="col-md-6">
+        <div class="events-product">
+          <div class="inner-events-row">
+            <div class="card">
+              <div class="card-body">
+                <p ><strong><span class="blue-text">Nom :</span></strong> <span class="black-text">{{ appartement.name }}</span></p>
+                <p><strong><span class="blue-text">Publié par :</span></strong> <span class="black-text">{{ appartement.postedBy }}</span></p>
+                <p><strong><span class="blue-text">Prix :</span></strong> <span class="black-text">{{ appartement.price }}</span></p>
+                <p><strong><span class="blue-text">Téléphone :</span></strong> <span class="black-text">{{ appartement.phone }}</span></p>
+                <p><strong><span class="blue-text">Email :</span></strong> <span class="black-text">{{ appartement.email }}</span></p>
+                <p><strong><span class="blue-text">Description :</span></strong> <span class="black-text">{{ appartement.description }}</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section Droite (Image de l'Appartement) -->
+      <div class="col-md-6">
+        <div class="events-product">
+          <div class="inner-events-row">
+            <div class="card">
+              <img [src]="'http://127.0.0.1:3000/getimage/' + appartement.image" class="card-img-top" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

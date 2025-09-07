@@ -1,0 +1,5 @@
+.bg-login-image {
+    background-image: url('../../../assets/admin/img/admin.jpg');
+    background-size: 80%; 
+    background-position: center; 
+}

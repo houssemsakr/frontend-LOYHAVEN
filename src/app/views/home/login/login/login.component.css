@@ -1,0 +1,19 @@
+
+.colorful-heading {
+    color: rgb(19, 228, 23); /* Remplacez "blue" par la couleur de votre choix */
+  }
+  /* Définir une classe personnalisée pour la couleur vert pistache */
+.custom-green-button {
+    background-color: #0cee1b;
+    color: white;
+    border: 1px solid #93c572; /* Bordure vert pistache */
+    padding: 12px 20px; /* Ajuster le padding selon les besoins */
+    border-radius: 5px; /* Ajouter des coins arrondis */
+    cursor: pointer; /* Curseur de souris pointer */
+  }
+  
+  /* Style supplémentaire au survol */
+  .custom-green-button:hover {
+    background-color: #0cee1b; /* Couleur de fond au survol */
+  }
+  

@@ -1,0 +1,49 @@
+<br>
+<br>
+<br>
+<br>
+<section class="product" id="product">
+  <div class="container">
+    <!-- Titre "Details" centré et en couleur vert pistache -->
+    <div class="row justify-content-center mb-5">
+      <div class="col-12 text-center">
+        <h3 class="colorful-heading green-text">
+          <span>Details</span>
+        </h3>
+      </div>
+    </div>
+
+    <!-- Contenu principal (Détails de l'Appartement et Image) -->
+    <div class="row justify-content-center">
+      <!-- Section Gauche (Détails de l'Appartement) -->
+      <div class="col-md-6">
+        <div class="events-product">
+          <div class="inner-events-row">
+            <div class="card">
+              <div class="card-body">
+                <p><strong><span class="blue-text">Firstname :</span></strong> <span class="black-text">{{ partenaire.firstname }}</span></p>
+                <p><strong><span class="blue-text">Lastname :</span></strong> <span class="black-text">{{ partenaire. lastname }}</span></p> 
+                <p><strong><span class="blue-text">Job :</span></strong> <span class="black-text">{{ partenaire.Job }}</span></p>
+                <p><strong><span class="blue-text">Adresse :</span></strong> <span class="black-text">{{ partenaire.adresse }}</span></p>
+                <p><strong><span class="blue-text">Téléphone :</span></strong> <span class="black-text">{{ partenaire.phone }}</span></p>
+                <p><strong><span class="blue-text">Email :</span></strong> <span class="black-text">{{ partenaire.email }}</span></p>
+                <p><strong><span class="blue-text">Description :</span></strong> <span class="black-text">{{ partenaire.description }}</span></p>
+              </div>
+            </div>    
+          </div>
+        </div>
+      </div>
+
+      <!-- Section Droite (Image de l'Appartement) -->
+      <div class="col-md-6">
+        <div class="events-product">
+          <div class="inner-events-row">
+            <div class="card">
+              <img [src]="'http://127.0.0.1:3000/getimage/' + partenaire.image" class="card-img-top" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

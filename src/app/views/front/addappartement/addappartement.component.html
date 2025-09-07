@@ -1,0 +1,49 @@
+
+<div class="container-fluid">
+
+  <!-- Page Heading -->
+
+  <!-- DataTales Example -->
+  <div class="card shadow mb-4">
+           <div class="card-header py-3">
+               <h6 class="m-0 font-weight-bold text-primary">Add appartement</h6>
+           </div>
+             
+           <div class="card-body">
+          
+              <div class="row mt-5">
+                <div class="col-3">               
+                    <input [(ngModel)]="newAppartement.name" type="text" class="form-control m-1" placeholder="Nom">
+                </div>
+                <div class="col-3">               
+                    <input [(ngModel)]="newAppartement.postedBy" type="text" class="form-control m-1" placeholder="Publié par">
+                </div>
+                <div class="col-3">               
+                    <input [(ngModel)]="newAppartement.price" type="number" class="form-control m-1" placeholder="Prix">
+                </div>
+                <div class="col-3">               
+                    <input [(ngModel)]="newAppartement.phone" type="text" class="form-control m-1" placeholder="Téléphone">
+                </div>
+                <div class="col-3">
+                  <input [(ngModel)]="newAppartement.email" type="text" class="form-control m-1" placeholder="Email">
+                </div>
+                <div class="col-3">
+                    <textarea [(ngModel)]="newAppartement.description" class="form-control m-1" placeholder="Description"></textarea>
+                </div>
+                 <div class="col-3">
+                    <input type="file" (change)="selectFile($event)" class="form-control m-1" placeholder="Image">
+                </div>
+                <div class="col-3">
+                    <button (click)="ajout()" type="button" class="btn btn-danger m-1 form-control">Add</button>
+                </div>
+              </div>
+
+            </div>
+       </div>
+    </div>
+      
+  
+
+               
+
+

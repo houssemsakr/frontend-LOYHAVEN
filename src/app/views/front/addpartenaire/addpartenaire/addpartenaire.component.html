@@ -1,0 +1,46 @@
+
+<div class="container-fluid">
+
+  <!-- Page Heading -->
+
+  <!-- DataTales Example -->
+  <div class="card shadow mb-4">
+           <div class="card-header py-3">
+               <h6 class="m-0 font-weight-bold text-primary">Add partenaire</h6>
+           </div>
+             
+           <div class="card-body">
+            
+            <div class="row mt-5">
+              <div class="col-3">
+                  <input [(ngModel)]="newPartenaire.firstname" type="text" class="form-control m-1" placeholder="First Name">
+              </div>
+              <div class="col-3">
+                  <input [(ngModel)]="newPartenaire.lastname" type="text" class="form-control m-1" placeholder="Last Name">
+              </div>
+              <div class="col-3">
+                  <input [(ngModel)]="newPartenaire.adresse" type="text" class="form-control m-1" placeholder="Address">
+              </div>
+              <div class="col-3">
+                  <input [(ngModel)]="newPartenaire.Job" type="text" class="form-control m-1" placeholder="Job">
+              </div>
+              <div class="col-3">
+                  <input [(ngModel)]="newPartenaire.phone" type="number" class="form-control m-1" placeholder="Phone">
+              </div>
+              <div class="col-3">
+                  <input [(ngModel)]="newPartenaire.email" type="email" class="form-control m-1" placeholder="Email">
+              </div>
+              <div class="col-3">
+                  <textarea [(ngModel)]="newPartenaire.description" class="form-control m-1" placeholder="Description"></textarea>
+              </div>
+              <div class="col-3">
+                  <input type="file" (change)="selectFile($event)" class="form-control m-1" placeholder="Image">
+              </div>
+              <div class="col-3">
+                  <button (click)="ajout()" type="button" class="btn btn-danger m-1 form-control">Add</button>
+              </div>
+          </div>
+    </div>
+  </div>     
+</div>
+      

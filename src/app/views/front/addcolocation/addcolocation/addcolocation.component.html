@@ -1,0 +1,36 @@
+
+
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+  
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+             <div class="card-header py-3">
+                 <h6 class="m-0 font-weight-bold text-primary">Add colocation</h6>
+             </div>
+               
+                <div class="row mt-5">
+                    <form (ngSubmit)="createPost()" style="width: 50%; margin: auto;">
+                        <label>Title:</label>
+                        <div class="form-group">
+                        <input type="text" class="form-control" name="title" [(ngModel)]="newPost.title" required>
+                         </div>
+                        <label>Content:</label>
+                        <div class="form-group">
+                        <textarea name="body" class="form-control"  rows="5" [(ngModel)]="newPost.body" required></textarea>
+                         </div>
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </form>
+                </div>
+  
+             
+         </div>
+      </div>
+        
+    
+  
+                 
+  
+  
+  

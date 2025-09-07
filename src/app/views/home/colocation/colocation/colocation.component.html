@@ -1,0 +1,28 @@
+<!-- colocation.component.html -->
+
+<section class="product" id="product">
+    <div style="text-align: center;">
+        <h3 class="colorful-heading"><span style="color: #16f016;">Colocation</span></h3>
+    </div>
+    
+    <div class="events-product">
+        <div class="inner-events-row">
+            <div class="inner-events-col" *ngFor="let c of colocations">
+                <div class="events-price"></div>
+                <div class="events-star">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2 style="color: rgb(11, 246, 101); display: inline-block;">Posted By:  <span style="color: #313171;">{{ c.title }}</span></h2>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2 style="color: rgb(11, 195, 246); display: inline-block;">Content: <br> <span style="color: #313171;">{{ c.body }}</span></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
